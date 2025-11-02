@@ -1,0 +1,4 @@
+.vscode
+test-server
+target
+package_and_run.cmd

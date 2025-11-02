@@ -1,0 +1,5 @@
+name: xd-time
+version: 1.0
+main: ru.xdproston.Main
+author: xdproston
+api-version: 1.21.8
