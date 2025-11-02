@@ -52,7 +52,7 @@ public class Main extends JavaPlugin
                                         
                                         sender.sendMessage(
                                             mm.deserialize(
-                                                "%s:<br>  daytime: (<green>%d<reset>m)<br>  nighttime: (<green>%d<reset>m)"
+                                                "%s:<br>  daytime: (<green>%d<reset>t)<br>  nighttime: (<green>%d<reset>t)"
                                                     .formatted(world.getName(), dayTime, nightTime)
                                             )
                                         );
