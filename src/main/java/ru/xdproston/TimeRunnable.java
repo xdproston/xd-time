@@ -31,9 +31,9 @@ public class TimeRunnable extends BukkitRunnable
             long currentTime = world.getTime();
 
             if (currentTime >= 0 && currentTime < 12000)
-                timeToAdd = 12000.0 / (dayTime * 1200.0);
+                timeToAdd = 12000.0 / dayTime;
             else 
-                timeToAdd = 12000.0 / (nightTime * 1200.0);
+                timeToAdd = 12000.0 / nightTime;
 
             double preciseTime = worldPreciseTime.getOrDefault(world.getUID(), (double)currentTime);
             preciseTime += timeToAdd;
