@@ -46,6 +46,11 @@ public class Main extends JavaPlugin
                                         World world = context.getArgument("world", World.class);
                                         CommandSender sender = context.getSource().getSender();
 
+                                        if (world.getEnvironment() != World.Environment.NORMAL) {
+                                            sender.sendMessage(mm.deserialize("<red>there is no cycle of day and night in this world, it doesn't make sense."));
+                                            return Command.SINGLE_SUCCESS;
+                                        }
+
                                         PersistentDataContainer pdc = world.getPersistentDataContainer();
                                         int dayTime = pdc.getOrDefault(dayTimeKey, PersistentDataType.INTEGER, -1);
                                         int nightTime = pdc.getOrDefault(nightTimeKey, PersistentDataType.INTEGER, -1);
@@ -68,6 +73,11 @@ public class Main extends JavaPlugin
                                                     .executes(context -> {
                                                         World world = context.getArgument("world", World.class);
                                                         CommandSender sender = context.getSource().getSender();
+
+                                                        if (world.getEnvironment() != World.Environment.NORMAL) {
+                                                            sender.sendMessage(mm.deserialize("<red>there is no cycle of day and night in this world, it doesn't make sense."));
+                                                            return Command.SINGLE_SUCCESS;
+                                                        }
 
                                                         int dayTime = context.getArgument("daytime", Integer.class);
                                                         int nightTime = context.getArgument("nighttime", Integer.class);
@@ -92,6 +102,11 @@ public class Main extends JavaPlugin
                                     .executes(context -> {
                                         World world = context.getArgument("world", World.class);
                                         CommandSender sender = context.getSource().getSender();
+
+                                        if (world.getEnvironment() != World.Environment.NORMAL) {
+                                            sender.sendMessage(mm.deserialize("<red>there is no cycle of day and night in this world, it doesn't make sense."));
+                                            return Command.SINGLE_SUCCESS;
+                                        }
 
                                         PersistentDataContainer pdc = world.getPersistentDataContainer();
                                         pdc.set(dayTimeKey, PersistentDataType.INTEGER, -1);

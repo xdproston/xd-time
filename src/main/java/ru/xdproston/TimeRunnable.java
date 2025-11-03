@@ -41,7 +41,7 @@ public class TimeRunnable extends BukkitRunnable
             if (preciseTime >= 24000)
                 preciseTime -= 24000;
 
-            world.setTime((long) preciseTime);
+            world.setTime((long)preciseTime);
             worldPreciseTime.put(world.getUID(), preciseTime);
         }
     }
