@@ -12,7 +12,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class TimeRunnable extends BukkitRunnable
 {
-    private final Map<UUID, Double> worldPreciseTime = new HashMap<>();
+    public static final Map<UUID, Double> worldPreciseTime = new HashMap<>();
 
     @Override
     public void run() {
