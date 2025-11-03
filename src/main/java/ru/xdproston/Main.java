@@ -32,6 +32,8 @@ public class Main extends JavaPlugin
     public void onEnable() {
         timeTask = new TimeRunnable().runTaskTimer(this, 0L, 1L);
 
+        getServer().getPluginManager().registerEvents(new SleepListener(this), this);
+
         getLifecycleManager().registerEventHandler(LifecycleEvents.COMMANDS, commands -> {
             MiniMessage mm = MiniMessage.miniMessage();
 
